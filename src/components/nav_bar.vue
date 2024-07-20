@@ -1,11 +1,11 @@
 <script setup>
     import drawer from './drawer.vue'
 
-    const emits = defineEmits(['pasarEvento'])
+    const emits = defineEmits(['eventoDrawer'])
 
     
     const activarDrawer = () => {
-        emits('pasarEvento')
+        emits('eventoDrawer')
     }
 
 

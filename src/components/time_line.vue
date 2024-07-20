@@ -41,7 +41,7 @@
 
 <template>
 
-    <ul class="time-line-customize timeline timeline-snap-icon max-md:timeline-compact timeline-vertical p-10 pt-20 bg-base-200">
+    <ul class="time-line-customize timeline timeline-snap-icon max-md:timeline-compact timeline-vertical p-10 pt-20">
         <li class="py-10 sm:py-0">
             <div class="timeline-middle">
                 <svg
@@ -64,13 +64,13 @@
                     <swiper :autoplay="false" :modules="modules"
                             class="mySwiper swip" >
                         <swiper-slide class="carousel-item w-full">
-                            <img class="w-full" src="/public/time-line-img/baranda-volcable1.webp" alt="">
+                            <img class="w-full img-timeline" src="/public/time-line-img/baranda-volcable1.webp" alt="">
                         </swiper-slide>
                         <swiper-slide class="carousel-item w-full">
-                            <img class="w-full" src="/public/time-line-img/baranda-volcable2.jpg" alt="">
+                            <img class="w-full img-timeline" src="/public/time-line-img/baranda-volcable2.jpg" alt="">
                         </swiper-slide>
                         <swiper-slide class="carousel-item w-full">
-                            <img class="w-full" src="/public/time-line-img/baranda-volcable3.webp" alt="">
+                            <img class="w-full img-timeline" src="/public/time-line-img/baranda-volcable3.webp" alt="">
                         </swiper-slide>
                     </swiper>
                 </div>
@@ -85,6 +85,7 @@
             </div>
             <hr />
         </li>
+
         <li class="py-10 sm:py-0">
             <hr />
             <div class="timeline-middle">
@@ -107,13 +108,13 @@
                     <swiper :autoplay="false" ref="swiperRef" :modules="modules" 
                             class="mySwiper swip" >
                         <swiper-slide class="carousel-item w-full">
-                            <img class="w-full" src="/public/time-line-img/camion-enlonado1.png" alt="">
+                            <img class="w-full img-timeline" src="/public/time-line-img/camion-enlonado1.png" alt="">
                         </swiper-slide>
                         <swiper-slide class="carousel-item w-full">
-                            <img class="w-full" src="/public/time-line-img/camion-enlonado2.webp" alt="">
+                            <img class="w-full img-timeline" src="/public/time-line-img/camion-enlonado2.webp" alt="">
                         </swiper-slide>
                         <swiper-slide class="carousel-item w-full">
-                            <img class="w-full" src="/public/time-line-img/camion-enlonado3.jpg" alt="">
+                            <img class="w-full img-timeline" src="/public/time-line-img/camion-enlonado3.jpg" alt="">
                         </swiper-slide>
                     </swiper>
                 </div>
@@ -124,12 +125,11 @@
                         been the primary part of Apple's consumer desktop offerings since its debut in August 1998,
                         and has evolved through seven distinct forms
                     </p>
-
                 </div>
-
             </div>
             <hr />
         </li>
+
         <li class="py-10 sm:py-0">
             <hr />
             <div class="timeline-middle">
@@ -151,13 +151,13 @@
                     <swiper :autoplay="false" ref="swiperRef" :modules="modules" 
                             class="mySwiper swip" >
                         <swiper-slide class="carousel-item w-full">
-                            <img class="w-full" src="/public/time-line-img/camion-chasis1.jpg" alt="">
+                            <img class="w-full img-timeline" src="/public/time-line-img/camion-chasis1.jpg" alt="">
                         </swiper-slide>
                         <swiper-slide class="carousel-item w-full">
-                            <img class="w-full" src="/public/time-line-img/camion-chasis2.jpg" alt="">
+                            <img class="w-full img-timeline" src="/public/time-line-img/camion-chasis2.jpg" alt="">
                         </swiper-slide>
                         <swiper-slide class="carousel-item w-full">
-                            <img class="w-full" src="/public/time-line-img/camion-chasis3.webp" alt="">
+                            <img class="w-full img-timeline" src="/public/time-line-img/camion-chasis3.webp" alt="">
                         </swiper-slide>
                     </swiper>
                 </div>
@@ -175,6 +175,7 @@
             </div>
             <hr />
         </li>
+
         <li class="py-10 sm:py-0">
             <hr />
             <div class="timeline-middle">
@@ -196,13 +197,13 @@
                     <swiper :autoplay="false" ref="swiperRef" :modules="modules" 
                             class="mySwiper swip" >
                         <swiper-slide class="carousel-item w-full">
-                            <img class="w-full" src="/public/time-line-img/camion-container1.jpg" alt="">
+                            <img class="w-full img-timeline" src="/public/time-line-img/camion-container1.jpg" alt="">
                         </swiper-slide>
                         <swiper-slide class="carousel-item w-full">
-                            <img class="w-full" src="/public/time-line-img/camion-container2.jpg" alt="">
+                            <img class="w-full img-timeline" src="/public/time-line-img/camion-container2.jpg" alt="">
                         </swiper-slide>
                         <swiper-slide class="carousel-item w-full">
-                            <img class="w-full" src="/public/time-line-img/camion-container3.jpg" alt="">
+                            <img class="w-full img-timeline" src="/public/time-line-img/camion-container3.jpg" alt="">
                         </swiper-slide>
                     </swiper>
                 </div>
@@ -248,6 +249,9 @@
         width: 15em;
     }
 
+
+
+
     @media  (min-width: 640px ) {
         .carousel {
             height: 15em;
@@ -274,5 +278,32 @@
             height: 15em;
             width: 25em;
         }
+
+        /* Chequear esta animacion CSS */
+        /* Chequear esta animacion CSS */
+        /* Chequear esta animacion CSS */
+
+        /* @keyframes show {
+            from {
+                opacity: 0;
+                scale: 25%;
+            }
+            to {
+                opacity: 1;
+                scale: 100%;
+            }
+        }
+
+        .img-timeline {
+            view-timeline-name: --image;
+            view-timeline-axis: block;
+
+            animation-timeline: --image;
+            animation-name: show;
+
+            animation-range: entry 25% cover 30%;
+            animation-fill-mode: both;
+
+        } */
     }
 </style>

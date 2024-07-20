@@ -50,7 +50,7 @@
                 </figure>
                 <div class="card-body">
                     <h2 class="text-center text-xl font-bold">Envios a todo el pais.</h2>
-                    <p class="text-center font-bold">If a dog chews shoes whose shoes does he choose?</p>
+                    <p class="text-center font-bold">Completa el formulario para una cotizacion personalizada</p>
                 </div>
             </div>
 

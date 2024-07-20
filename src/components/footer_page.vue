@@ -22,6 +22,10 @@
 
 <style scoped>
 
+    .footer {
+        color: beige;
+    }
+
     .chasis {
         font-size: 4em;
     }
