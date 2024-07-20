@@ -22,7 +22,6 @@
     onMounted(() => {
         try {
             initEmailJs()
-            console.log("iniEmailJs inicializado")
         } catch (err) {
             statusMessage.value = "Temporalmente inhabilitado :("
             console.error(err.text)
