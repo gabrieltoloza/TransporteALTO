@@ -8,6 +8,7 @@
     import footer_page from './components/footer_page.vue';
     import timeLine from './components/time_line.vue'
     import { ref } from 'vue';
+    import footer_page2 from './components/footer2.vue';
     // Componentes
     // Componentes
     
@@ -36,13 +37,12 @@
             
             <!-- Time Line -->
             <timeLine />
-
             
             <!-- Seccion Contacto -->
             <contact_form />
 
-            
             <!-- Seccion Footer -->
+            <footer_page2 />
             <footer_page />
             
         </div>
@@ -51,8 +51,7 @@
             
             <ul class="ul-drawer menu bg-base-200 text-base-content min-h-full w-full p-4 lg:w-80" >
                 <!-- Sidebar content here -->
-                <!-- <div class="container-sidebar flex-1 lg:ml-10">
-                </div> -->
+
                 <div class="flex mb-10">
                     <img class="img-navbar" src="/public/logo/TransporteAlto-copia.png" alt="">
                     <li class="text-end ml-auto"><label for="my-drawer" id="btn-close" class="btn btn-ghost w-10 ">X</label></li>

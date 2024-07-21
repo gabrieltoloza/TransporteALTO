@@ -1,5 +1,5 @@
 <script setup>
-    import drawer from './drawer.vue'
+
 
     const emits = defineEmits(['eventoDrawer'])
 

@@ -27,13 +27,13 @@
 
         
         <div class="carousel w-full h-full absolute top-0 left-0 z-0">
-            <swiper :pagination="pagination" :loop="true" :autoplay="{ delay: 4000, disableOnInteraction: false}" :modules="modules" class="mySwiper">
-                <swiper-slide><img class="carousel-item w-full h-full blur-sm" src="/public/img-carousel/camion-carousel-ruta1.avif" alt=""></swiper-slide>
-                <swiper-slide><img class="carousel-item w-full h-full blur-sm" src="/public/img-carousel/camion-carousel-main1.webp" alt=""></swiper-slide>
-                <swiper-slide><img class="carousel-item w-full h-full blur-sm" src="/public/img-carousel/container3.jpg" alt=""></swiper-slide>
-                <swiper-slide><img class="carousel-item w-full h-full blur-sm" src="/public/img-carousel/camion-ruta-amanecer.webp" alt=""></swiper-slide>
-                <swiper-slide><img class="carousel-item w-full h-full blur-sm" src="/public/img-carousel/container2.png" alt=""></swiper-slide>
-                <swiper-slide><img class="carousel-item w-full h-full blur-sm" src="/public/img-carousel/camion-carousel-main2.avif" alt=""></swiper-slide>
+            <swiper :pagination="pagination" :loop="true" :autoplay="{ delay: 4000, disableOnInteraction: false}" :modules="modules" class="mySwiper ">
+                <swiper-slide><img loading="lazy" class="carousel-item w-full h-full blur-sm" src="/public/img-carousel/camion-carousel-ruta1.avif" alt=""></swiper-slide>
+                <swiper-slide><img loading="lazy" class="carousel-item w-full h-full blur-sm" src="/public/img-carousel/container3.jpg" alt=""></swiper-slide>
+                <swiper-slide><img loading="lazy" class="carousel-item w-full h-full blur-sm" src="/public/img-carousel/container2.png" alt=""></swiper-slide>
+                <swiper-slide><img loading="lazy" class="carousel-item w-full h-full blur-sm" src="/public/img-carousel/camion-ruta-amanecer.webp" alt=""></swiper-slide>
+                <swiper-slide><img loading="lazy" class="carousel-item w-full h-full blur-sm" src="/public/img-carousel/camion-carousel-main2.avif" alt=""></swiper-slide>
+                <swiper-slide><img loading="lazy" class="carousel-item w-full h-full blur-sm" src="/public/img-carousel/camion-carousel-main1.webp" alt=""></swiper-slide>
             </swiper>
         </div>
 
@@ -126,7 +126,7 @@
 
     @media  (min-width: 1024px ) {
         .mockup-card {
-            display: block;
+            display: none;
             min-height: 100%;
         }
     }

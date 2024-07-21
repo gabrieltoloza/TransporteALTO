@@ -12,21 +12,45 @@
 
     onMounted(() => {
         const swiperEl = document.querySelectorAll('.swip')
-        swiperEl.forEach(element => {
+        const screenWidth = window.innerWidth
+        
+        if(screenWidth > 920) {
+            swiperEl.forEach(element => {
             
-            element.addEventListener('mouseenter', () => {
-                element.swiper.params.autoplay.delay = 800
-                element.swiper.autoplay.start()
-                console.log(element.swiper.params)
-                console.log("Se disparo el evento 'start' ")
-            })
+                element.addEventListener('mouseenter', () => {
+                    element.swiper.params.autoplay.delay = 800
+                    element.swiper.autoplay.start()
+                    console.log(element.swiper.params)
+                    console.log("Se disparo el evento 'start' ")
+                })
 
-            element.addEventListener('mouseleave', () => {
-                element.swiper.autoplay.stop()
-                element.swiper.slideTo(0)
-                console.log("Se disparo el evento 'stop' ")
+                element.addEventListener('mouseleave', () => {
+                    element.swiper.autoplay.stop()
+                    element.swiper.slideTo(0)
+                    console.log("Se disparo el evento 'stop' ")
+                })
             })
-        })
+        } else {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.swiper.params.autoplay.delay = 800
+                        entry.target.swiper.autoplay.start()
+                        console.log("Se disparo el evento 'start' en dispositivos mobiles")
+                    } else {
+                        entry.target.swiper.autoplay.stop()
+                        entry.target.swiper.slideTo(0)
+                        console.log("Se disparo el evento 'stop' en dispositibos mobiles")
+                    }
+                })
+            }, {threshold: 1})
+
+            swiperEl.forEach(element => {
+                observer.observe(element)
+            })
+        }
+
+
         
     })
 
@@ -56,15 +80,16 @@
                 </svg>
             </div>
             <div class="timeline-start mb-10 md:text-end">
-                <time class="font-mono italic time-text">16.3mts x 4.5mts</time>
-                <div class="text-lg font-black title-text pb-6">Transporte de cargas con barandas volcables</div>
+                <time class="font-mono italic time-text lazy-effect">16.3mts x 4.5mts</time>
+                <div class="text-lg font-black title-text pb-6 lazy-effect">Transporte de cargas con barandas volcables</div>
 
 
                 <div class="carousel rounded-box">
                     <swiper :autoplay="false" :modules="modules"
-                            class="mySwiper swip" >
+                            class="mySwiper swip lazy-effect" >
                         <swiper-slide class="carousel-item w-full">
                             <img class="w-full img-timeline" src="/public/time-line-img/baranda-volcable1.webp" alt="">
+                            <!-- <div class="swiper-lazy-preloader"></div> -->
                         </swiper-slide>
                         <swiper-slide class="carousel-item w-full">
                             <img class="w-full img-timeline" src="/public/time-line-img/baranda-volcable2.jpg" alt="">
@@ -76,7 +101,7 @@
                 </div>
 
                 <div>
-                    <p class="description-text py-6">
+                    <p class="description-text py-6 lazy-effect">
                         Transporte de cargas generales en baranda voclable, capacidad 15mt. x 4.1mt.
                         Se puede llevar al aire libre, enlonado, etc .
                     </p>
@@ -101,12 +126,12 @@
                 </svg>
             </div>
             <div class="timeline-end mb-10">
-                <time class="font-mono italic time-text ">16.3mts x 4.5mts</time>
-                <div class="text-lg font-black title-text pb-6">Transporte de carga enlonado largo y ancho completo.</div>
+                <time class="font-mono italic time-text lazy-effect">16.3mts x 4.5mts</time>
+                <div class="text-lg font-black title-text pb-6 lazy-effect">Transporte de carga enlonado largo y ancho completo.</div>
                 
                 <div class="carousel rounded-box">
                     <swiper :autoplay="false" ref="swiperRef" :modules="modules" 
-                            class="mySwiper swip" >
+                            class="mySwiper swip lazy-effect" >
                         <swiper-slide class="carousel-item w-full">
                             <img class="w-full img-timeline" src="/public/time-line-img/camion-enlonado1.png" alt="">
                         </swiper-slide>
@@ -120,7 +145,7 @@
                 </div>
 
                 <div>
-                    <p class="description-text py-6">
+                    <p class="description-text py-6 lazy-effect">
                         iMac is a family of all-in-one Mac desktop computers designed and built by Apple Inc. It has
                         been the primary part of Apple's consumer desktop offerings since its debut in August 1998,
                         and has evolved through seven distinct forms
@@ -145,11 +170,11 @@
                 </svg>
             </div>
             <div class="timeline-start mb-10 md:text-end">
-                <time class="font-mono italic time-text">7.5mts x 4.5mts</time>
-                <div class="text-lg font-black title-text pb-6">Transporte de carga en chasis cerrado</div>
+                <time class="font-mono italic time-text lazy-effect">7.5mts x 4.5mts</time>
+                <div class="text-lg font-black title-text pb-6 lazy-effect">Transporte de carga en chasis cerrado</div>
                 <div class="carousel rounded-box">
                     <swiper :autoplay="false" ref="swiperRef" :modules="modules" 
-                            class="mySwiper swip" >
+                            class="mySwiper swip lazy-effect" >
                         <swiper-slide class="carousel-item w-full">
                             <img class="w-full img-timeline" src="/public/time-line-img/camion-chasis1.jpg" alt="">
                         </swiper-slide>
@@ -163,7 +188,7 @@
                 </div>
 
                 <div>
-                    <p class="description-text py-6">
+                    <p class="description-text py-6 lazy-effect">
                         The iPod is a discontinued series of portable media players and multi-purpose mobile devices
                         designed and marketed by Apple Inc. The first version was released on October 23, 2001, about
                         8+1⁄2 months after the Macintosh version of iTunes was released. Apple sold an estimated 450
@@ -191,11 +216,11 @@
                 </svg>
             </div>
             <div class="timeline-end mb-10">
-                <time class="font-mono italic time-text">16.3mts x 4.5mts</time>
-                <div class="text-lg font-black title-text pb-6">Transporte de contenedores</div>
+                <time class="font-mono italic time-text lazy-effect">16.3mts x 4.5mts</time>
+                <div class="text-lg font-black title-text pb-6 lazy-effect">Transporte de contenedores</div>
                 <div class="carousel rounded-box">
                     <swiper :autoplay="false" ref="swiperRef" :modules="modules" 
-                            class="mySwiper swip" >
+                            class="mySwiper swip lazy-effect" >
                         <swiper-slide class="carousel-item w-full">
                             <img class="w-full img-timeline" src="/public/time-line-img/camion-container1.jpg" alt="">
                         </swiper-slide>
@@ -208,7 +233,7 @@
                     </swiper>
                 </div>
                 <div>
-                    <p class="description-text py-6">
+                    <p class="description-text py-6 lazy-effect">
                         iPhone is a line of smartphones produced by Apple Inc. that use Apple's own iOS mobile
                         operating system. The first-generation iPhone was announced by then-Apple CEO Steve Jobs on
                         January 9, 2007. Since then, Apple has annually released new iPhone models and iOS updates. As
@@ -249,6 +274,17 @@
         width: 15em;
     }
 
+
+    .lazy-effect {
+        transform: translateY(100px);
+        opacity: 0;
+        transition: 1.2s;
+    }
+
+    .lazy-effect.show {
+        transform: translateY(0);
+        opacity: 1;
+    }
 
 
 
