@@ -7,18 +7,22 @@
     import 'swiper/css/pagination';
     import { Pagination, Autoplay } from 'swiper/modules';
     import { ref } from 'vue';
+    import { RouterLink } from 'vue-router';
 
 
     const pagination = ref({
         clickable: true,
         renderBullet: (index, className) => `
         <span class="${className}">
-
         </span>`,
     });
     
     const modules = ref([Pagination, Autoplay]);
 
+    
+    const observer = new IntersectionObserver(entries => {
+        
+    })
 
 </script>
 
@@ -56,12 +60,13 @@
 
             <div class="lg:w-3/5 text-center container-text-main lg:mr-10">
                 <h1 class="text-5xl font-bold">Transportes de cargas generales</h1>
-                <p class="py-10 parrafo-main">
-                    Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem
-                    quasi. In deleniti eaque aut repudiandae et a id nisi.
+                <p class="py-10 parrafo-main font-bold">
+                    Cargas sueltas o paletizadas. Cotizamos tu translado en el instante. Contactanos
                 </p>
                 <div class="btn-group space-x-0 md:space-x-2 gap-2">
-                    <a href="#" class="btn btn-ghost mx-1 text-sm md:text-base btn-blue"><ContactIcon />Contacto</a>
+                    <RouterLink to="/cotizacion">
+                        <a href="#" class="btn btn-ghost mx-1 text-sm md:text-base btn-blue"><ContactIcon />Contacto</a>
+                    </RouterLink>
                     <a href="https://wa.me/1150172832" class="btn btn-success text-sm md:text-base btn-whatsapp" target="_blank"><WhatsappIcon class="wp-icon"/>Whatsapp</a> 
                 </div>
             </div>

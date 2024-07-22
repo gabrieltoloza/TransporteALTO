@@ -1,5 +1,7 @@
 <script setup>
+    import { onMounted, ref } from 'vue';
 
+    
 
     const emits = defineEmits(['eventoDrawer'])
 
@@ -7,7 +9,6 @@
     const activarDrawer = () => {
         emits('eventoDrawer')
     }
-
 
 
 </script>
@@ -35,7 +36,7 @@
                       d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
             </svg>
         </label>
-        <label @click="activarDrawer" for="my-drawer" class="btn btn-ghost btn-menu-drawer2 mr-3 p-3 text-center">
+        <label @click="activarDrawer" ref="inputDrawer" for="my-drawer" id="probando-drawer" class="btn btn-ghost btn-menu-drawer2 mr-3 p-3 text-center">
             <span class="abrir-menu text-end">Abrir Menu</span>
         </label>
 

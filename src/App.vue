@@ -3,51 +3,62 @@
     // Componentes
     // Componentes
     import nav_bar from './components/nav_bar.vue';
-    import main_section_carousel from './components/main_section_carousel.vue';
-    import contact_form from './components/contact_form.vue';
+    import { observer } from '../utils';
+    import footer2 from './components/footer2.vue';
     import footer_page from './components/footer_page.vue';
-    import timeLine from './components/time_line.vue'
-    import { ref } from 'vue';
-    import footer_page2 from './components/footer2.vue';
-    // Componentes
-    // Componentes
-    
+
+    import { computed, onMounted, ref, watch } from 'vue';
+    import { RouterLink, RouterView, useRoute } from 'vue-router';
+
+    const inputDrawer = ref(false)
+
+
+    const setDrawer = () => {
+        inputDrawer.value = false
+    }
+
+
     const eventoNavbar = (e) => {
         console.log(e)
         const drawerStats = document.querySelector('.drawer-side')
+        
         console.log(drawerStats)
     }
 
-    const switchSideBar = ref(true)
+
+    onMounted(() => {
+
+        const nodeTimeLine = document.querySelectorAll('.lazy-effect')
+
+        nodeTimeLine.forEach(element => {
+            observer.observe(element)
+        })
+        
+    })
+
     
 
+    
 
 </script>
 
 <template>
-
+        
+    
     <div class="drawer">
-        <input id="my-drawer" type="checkbox" class="drawer-toggle" />
+        <input id="my-drawer" v-model="inputDrawer" type="checkbox" class="drawer-toggle" />
         <div class="drawer-content">
             <!-- Seccion Navbar ( Header) -->
             <nav_bar @evento-drawer="eventoNavbar"/>
             
-            <!-- Seccion Main-Carousel content -->
-            <main_section_carousel/>
+            <RouterView />
             
-            <!-- Time Line -->
-            <timeLine />
-            
-            <!-- Seccion Contacto -->
-            <contact_form />
-
-            <!-- Seccion Footer -->
-            <footer_page2 />
+            <!-- Seccion footer -->
+            <footer2 />
             <footer_page />
-            
         </div>
-        <div v-show="switchSideBar" class="drawer-side">
-            <label for="my-drawer" aria-label="close sidebar" class="drawer-overlay"></label>
+        <div class="drawer-side">
+            <label for="my-drawer" aria-label="close sidebar" class="drawer-overlay" ></label>
             
             <ul class="ul-drawer menu bg-base-200 text-base-content min-h-full w-full p-4 lg:w-80" >
                 <!-- Sidebar content here -->
@@ -56,10 +67,16 @@
                     <img class="img-navbar" src="/public/logo/TransporteAlto-copia.png" alt="">
                     <li class="text-end ml-auto"><label for="my-drawer" id="btn-close" class="btn btn-ghost w-10 ">X</label></li>
                 </div>
-                <li><a>1 - Inicio</a></li>
-                <li><a>2 - Cotiza tu viaje</a></li>
-                <li><a href="https://api.whatsapp.com/send/?phone=1150172832&text&type=phone_number&app_absent=0" target="_blank">3 - Enviar Whatsapp</a></li>
-                <li><a>4 - Acerca de nosotros</a></li>
+                <RouterLink to="/">
+                    <li><a @click="setDrawer">1 - Inicio</a></li>
+                </RouterLink>
+                <RouterLink to="/cotizacion">
+                    <li><label @click="setDrawer" aria-label="close sidebar" class="drawer-overlay">2 - Cotiza tu viaje</label></li>
+                </RouterLink>
+                <li><a @click="setDrawer" href="https://api.whatsapp.com/send/?phone=1150172832&text&type=phone_number&app_absent=0" target="_blank">3 - Enviar Whatsapp</a></li>
+                <RouterLink to="/Nosotros">
+                    <li><a @click="setDrawer">4 - Acerca de nosotros</a></li>
+                </RouterLink>
             </ul>
         </div>
     </div>
@@ -94,6 +111,17 @@
         background: rgba(24,145,172,255);
         font-size: 1.3em;
 
+    }
+
+    .lazy-effect {
+        transform: translateY(100px);
+        opacity: 0;
+        transition: 1.2s;
+    }
+
+    .lazy-effect.show {
+        transform: translateY(0);
+        opacity: 1;
     }
 
     /* @media  (min-width: 1225px ) {

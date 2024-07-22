@@ -1,8 +1,10 @@
 <script setup>
     import { computed, onMounted } from 'vue';
     import { ref } from 'vue';
+    import { useRoute } from 'vue-router';
     import emailjs from '@emailjs/browser';
     import { formSchema } from '../../utils';
+    import { observer } from '../../utils';
 
 
 
@@ -43,6 +45,21 @@
             console.error(err.text)
         }
     });
+
+    onMounted(() => {
+        console.log("Componente 'contact_form' montado!")
+        const route = useRoute()
+        const isHome = computed(() => route.path === '/')
+        const nodeTimeLine = document.querySelectorAll('.lazy-effect')
+        
+        console.log("isHome: ", isHome.value)
+        
+        if (!isHome.value) {
+            nodeTimeLine.forEach(element => {
+                observer.observe(element)
+            })
+        } 
+    })
 
 
 
@@ -91,6 +108,8 @@
         }
 
     };
+
+
 
     
 </script>

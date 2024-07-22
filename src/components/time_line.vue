@@ -1,7 +1,9 @@
 <script setup>
-    import { onMounted, ref, watch } from 'vue';
+    import { computed, onMounted, ref, watch } from 'vue';
     import { Swiper, SwiperSlide } from 'swiper/vue';
     import { Autoplay, EffectFade, Navigation} from 'swiper/modules';
+    import { useRoute } from 'vue-router';
+    import { observer } from '../../utils';
     import 'swiper/css';
     import 'swiper/swiper-bundle.css';
     import 'swiper/css/effect-fade';
@@ -11,6 +13,7 @@
 
 
     onMounted(() => {
+        
         const swiperEl = document.querySelectorAll('.swip')
         const screenWidth = window.innerWidth
         
@@ -20,7 +23,6 @@
                 element.addEventListener('mouseenter', () => {
                     element.swiper.params.autoplay.delay = 800
                     element.swiper.autoplay.start()
-                    console.log(element.swiper.params)
                     console.log("Se disparo el evento 'start' ")
                 })
 
@@ -31,7 +33,7 @@
                 })
             })
         } else {
-            const observer = new IntersectionObserver((entries) => {
+            const observerTimeLine = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
                         entry.target.swiper.params.autoplay.delay = 800
@@ -46,20 +48,33 @@
             }, {threshold: 1})
 
             swiperEl.forEach(element => {
-                observer.observe(element)
+                observerTimeLine.observe(element)
             })
         }
-
-
         
     })
 
     // RESOLVER EL EFECTO FADE A FUTURO
     // RESOLVER EL EFECTO FADE A FUTURO
     // RESOLVER EL EFECTO FADE A FUTURO
-    // RESOLVER EL EFECTO FADE A FUTURO
-    // RESOLVER EL EFECTO FADE A FUTURO
 
+
+    onMounted(() => {
+        console.log("Componente 'time_line' montado!")
+        const route = useRoute()
+        const isHome = computed(() => route.path === '/')
+        const nodeTimeLine = document.querySelectorAll('.lazy-effect')
+        
+        console.log("isHome: ", isHome.value)
+        
+        if (!isHome.value) {
+            nodeTimeLine.forEach(element => {
+            observer.observe(element)
+        })
+        }      
+
+
+    })
 
 </script>
 

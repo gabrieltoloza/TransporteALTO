@@ -1,33 +1,20 @@
 <script setup>
     import { onMounted } from 'vue';
-import camionPlayo from './iconos/camion_playo.vue';
+    import camionPlayo from './iconos/camion_playo.vue';
+    import { observer } from '../../utils';
 
     const fecha = new Date().getFullYear()
 
-    
-    onMounted(() => {
 
-        const footer = document.querySelectorAll('.lazy-effect')
+    // onMounted(() => {
 
-        const observer = new IntersectionObserver(entries => {
-            entries.forEach(entry => {
-                entry.target.classList.toggle("show", entry.isIntersecting)
-                if (entry.isIntersecting) observer.unobserve(entry.target)
-            }) 
-        }, 
-        {
-            threshold: 0,
-            rootMargin: "100px"
-        })
-        
+    //     const footer = document.querySelectorAll('.lazy-effect')
+    //     console.log(footer)
 
-        footer.forEach(foot => {
-            observer.observe(foot)
-        })
-
-    })
-
-
+    //     footer.forEach(foot => {
+    //         observer.observe(foot)
+    //     })
+    // })
     
 </script>
 
@@ -63,13 +50,11 @@ import camionPlayo from './iconos/camion_playo.vue';
     }
 
     .lazy-effect {
-        transform: translateX(100px);
         opacity: 0;
-        transition: 1.2s;
+        transition: 4.5s;
     }
 
     .lazy-effect.show {
-        transform: translateX(0);
         opacity: 1;
     }
 </style>

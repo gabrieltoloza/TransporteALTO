@@ -1,6 +1,14 @@
 import { z } from 'zod';
 
 
+// =======================================================================================================
+
+
+//*  Esquema de validaciones ZOD
+//*  Esquema de validaciones ZOD
+//*  Esquema de validaciones ZOD
+
+
 export const formSchema = z.object({
     name: z.string({
         required_error: "Nombre es requerido.",
@@ -19,3 +27,22 @@ export const formSchema = z.object({
     }).min(1, "Este campo no puede estar vacio. 'consulta'")
 })
 
+
+// =======================================================================================================
+
+
+
+//*  Metodo de IntersectionObserver
+//*  Metodo de IntersectionObserver
+//*  Metodo de IntersectionObserver
+
+
+export const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        entry.target.classList.toggle("show", entry.isIntersecting)
+        if (entry.isIntersecting) observer.unobserve(entry.target)
+    })
+},{
+    threshold: 0,
+    rootMargin: "100px"
+})
