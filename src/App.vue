@@ -32,6 +32,18 @@
                 content: 'https://toxicblood2023.github.io/TransporteALTO/assets/TransporteAlto-copia-CzGPZYZZ.png'
             },
             {
+                property: 'og:image:width',
+                content: '1200'
+            },
+            {
+                property: 'og:image:height',
+                content: '630'
+            },
+            {
+                property: 'og:image:alt',
+                content: 'Transporte ALTO Logo'
+            },
+            {
                 property: 'og:url',
                 content: 'https://toxicblood2023.github.io/TransporteALTO/'
             },
