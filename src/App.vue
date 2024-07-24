@@ -29,7 +29,7 @@
             },
             {
                 property: 'og:image',
-                content: 'https://toxicblood2023.github.io/TransporteALTO/assets/TransporteAlto-copia-CzGPZYZZ.png'
+                content: './TransporteAlto-copia.png'
             },
             {
                 property: 'og:image:width',
