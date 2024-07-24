@@ -9,53 +9,12 @@
 
     import { computed, onMounted, ref, watch } from 'vue';
     import { RouterLink, RouterView, useRoute } from 'vue-router';
-    import { useHead } from '@vueuse/head';
+    import { useHead, Head } from '@vueuse/head';
 
     // SEO y POSICIONAMIENTO
     useHead({
         title: 'Transporte ALTO - Transporte de cargas generales terrestres',
-        meta: [
-            {
-                name: 'description',
-                content: 'En Transporte ALTO nos dedicamos a transportes de cargas generales terrestres. Para mas informacion visita nuestro sitio oficial.'
-            },
-            {
-                property: 'og:title',
-                content: 'Transporte ALTO - Cargas generales terrestres'
-            },
-            {
-                property: 'og:description',
-                content: 'En transporte ALTO nos dedicamos a transportes de cargas generales terrestres. Para mas informacion viista nuestro sitio oficial.'
-            },
-            {
-                property: 'og:image',
-                content: './TransporteAlto-copia.png'
-            },
-            {
-                property: 'og:image:width',
-                content: '1200'
-            },
-            {
-                property: 'og:image:height',
-                content: '630'
-            },
-            {
-                property: 'og:image:alt',
-                content: 'Transporte ALTO Logo'
-            },
-            {
-                property: 'og:url',
-                content: 'https://toxicblood2023.github.io/TransporteALTO/'
-            },
-            {
-                property: 'og:type',
-                content: 'website'
-            },
-            {   
-                property: 'twitter:card',
-                content: 'summary_large_image'
-            }
-        ]
+
     })
     // SEO y POSICIONAMIENTO
 
@@ -94,6 +53,27 @@
 
 <template>
         
+    <Head>
+        <meta name="description" content="En Transporte ALTO nos dedicamos a transportes de cargas generales terrestres. Para mas informacion visita nuestro sitio oficial." />
+        
+        
+        <meta property="og:title" content="Transporte ALTO - Cargas generales terrestres" />
+        <meta name="twitter:title" content="Transporte ALTO - Cargas generales terrestres" />
+        
+        <meta property="og:description" content="En transporte ALTO nos dedicamos a transportes de cargas generales terrestres. Para mas informacion viista nuestro sitio oficial." />
+        <meta name="twitter:description" content="En transporte ALTO nos dedicamos a transportes de cargas generales terrestres. Para mas informacion viista nuestro sitio oficial." />
+        
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta property="og:type" content="website" />
+        
+        <meta property="og:image" content="https://toxicblood2023.github.io/TransporteALTO/assets/TransporteAlto-copia-CzGPZYZZ.png">
+        
+        <meta property="og:site_name" content="Transporte ALTO" />
+        
+        <link rel="canonical" href="https://toxicblood2023.github.io/TransporteALTO/" />
+        <meta property="og:url" content="https://toxicblood2023.github.io/TransporteALTO/" />
+
+    </Head>
     
     <div class="drawer">
         <input id="my-drawer" v-model="inputDrawer" type="checkbox" class="drawer-toggle" />
