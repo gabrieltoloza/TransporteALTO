@@ -27,11 +27,7 @@ const routes = [
 ];
 
 
-const router = createRouter({
-    history: createWebHistory('/TransporteALTO/'),
-    routes: routes
-});
 
 
+export { routes }
 
-export default router;

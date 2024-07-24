@@ -21,19 +21,6 @@
         
     })
 
-    // onMounted(() => {
-
-    //     const nodeTimeLine = document.querySelectorAll('.lazy-effect')
-
-    //     const route = useRoute()
-    //     const isHome = computed(() => route.path === '/')
-
-    //     if(isHome.value) {
-    //         nodeTimeLine.forEach(element => {
-    //             observer.observe(element)
-    //         })
-    //     }
-    // })
 
 </script>
 

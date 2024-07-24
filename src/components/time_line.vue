@@ -7,6 +7,30 @@
     import 'swiper/css';
     import 'swiper/swiper-bundle.css';
     import 'swiper/css/effect-fade';
+    import { useHead } from '@vueuse/head';
+
+    //SEO y posicionamiento
+    useHead({
+        meta: [
+            {
+                property: 'description',
+                content: 'Transporte de cargas pesadas y ligeras. Flota diversa de corta y larga distancia'
+            },
+            {
+                property: 'og:title',
+                content: 'Transporte ALTO - Acerca de nosotros'
+            },
+            {
+                property: 'og:description',
+                content: 'Transporte de cargas pesadas y ligeras. Flota diversa de corta y larga distancia.'
+            },
+            {
+                property: 'twitter:card',
+                content: 'summary_large_image'
+            }
+        ]
+    })
+    //SEO y posicionamiento
     
     // Registro de modulos Swiper
     const modules = ref([EffectFade, Autoplay])
@@ -103,14 +127,14 @@
                     <swiper :autoplay="false" :modules="modules"
                             class="mySwiper swip lazy-effect" >
                         <swiper-slide class="carousel-item w-full">
-                            <img class="w-full img-timeline" src="/public/time-line-img/baranda-volcable1.webp" alt="">
+                            <img class="w-full img-timeline" src="/public/time-line-img/baranda-volcable1.webp" alt="camion baranda voclable transportes transporte ruta pallets contenedores chasis acoplado">
                             <!-- <div class="swiper-lazy-preloader"></div> -->
                         </swiper-slide>
                         <swiper-slide class="carousel-item w-full">
-                            <img class="w-full img-timeline" src="/public/time-line-img/baranda-volcable2.jpg" alt="">
+                            <img class="w-full img-timeline" src="/public/time-line-img/baranda-volcable2.jpg" alt="camion baranda voclable transportes transporte ruta pallets contenedores chasis acoplado">
                         </swiper-slide>
                         <swiper-slide class="carousel-item w-full">
-                            <img class="w-full img-timeline" src="/public/time-line-img/baranda-volcable3.webp" alt="">
+                            <img class="w-full img-timeline" src="/public/time-line-img/baranda-volcable3.webp" alt="camion baranda voclable transportes transporte ruta pallets contenedores chasis acoplado">
                         </swiper-slide>
                     </swiper>
                 </div>
@@ -148,13 +172,13 @@
                     <swiper :autoplay="false" ref="swiperRef" :modules="modules" 
                             class="mySwiper swip lazy-effect" >
                         <swiper-slide class="carousel-item w-full">
-                            <img class="w-full img-timeline" src="/public/time-line-img/camion-enlonado1.png" alt="">
+                            <img class="w-full img-timeline" src="/public/time-line-img/camion-enlonado1.png" alt="camion baranda voclable lona enlonado transportes transporte ruta pallets contenedores chasis acoplado">
                         </swiper-slide>
                         <swiper-slide class="carousel-item w-full">
-                            <img class="w-full img-timeline" src="/public/time-line-img/camion-enlonado2.webp" alt="">
+                            <img class="w-full img-timeline" src="/public/time-line-img/camion-enlonado2.webp" alt="camion baranda voclable lona enlonado transportes transporte ruta pallets contenedores chasis acoplado">
                         </swiper-slide>
                         <swiper-slide class="carousel-item w-full">
-                            <img class="w-full img-timeline" src="/public/time-line-img/camion-enlonado3.jpg" alt="">
+                            <img class="w-full img-timeline" src="/public/time-line-img/camion-enlonado3.jpg" alt="camion baranda voclable lona enlonado transportes transporte ruta pallets contenedores chasis acoplado">
                         </swiper-slide>
                     </swiper>
                 </div>
@@ -191,13 +215,13 @@
                     <swiper :autoplay="false" ref="swiperRef" :modules="modules" 
                             class="mySwiper swip lazy-effect" >
                         <swiper-slide class="carousel-item w-full">
-                            <img class="w-full img-timeline" src="/public/time-line-img/camion-chasis1.jpg" alt="">
+                            <img class="w-full img-timeline" src="/public/time-line-img/camion-chasis1.jpg" alt="camion baranda voclable lona enlonado transportes transporte ruta pallets contenedores chasis acoplado">
                         </swiper-slide>
                         <swiper-slide class="carousel-item w-full">
-                            <img class="w-full img-timeline" src="/public/time-line-img/camion-chasis2.jpg" alt="">
+                            <img class="w-full img-timeline" src="/public/time-line-img/camion-chasis2.jpg" alt="camion baranda voclable lona enlonado transportes transporte ruta pallets contenedores chasis acoplado">
                         </swiper-slide>
                         <swiper-slide class="carousel-item w-full">
-                            <img class="w-full img-timeline" src="/public/time-line-img/camion-chasis3.webp" alt="">
+                            <img class="w-full img-timeline" src="/public/time-line-img/camion-chasis3.webp" alt="camion baranda voclable lona enlonado transportes transporte ruta pallets contenedores chasis acoplado">
                         </swiper-slide>
                     </swiper>
                 </div>
@@ -237,13 +261,13 @@
                     <swiper :autoplay="false" ref="swiperRef" :modules="modules" 
                             class="mySwiper swip lazy-effect" >
                         <swiper-slide class="carousel-item w-full">
-                            <img class="w-full img-timeline" src="/public/time-line-img/camion-container1.jpg" alt="">
+                            <img class="w-full img-timeline" src="/public/time-line-img/camion-container1.jpg" alt="camion baranda voclable lona enlonado transportes transporte ruta pallets contenedores chasis acoplado">
                         </swiper-slide>
                         <swiper-slide class="carousel-item w-full">
-                            <img class="w-full img-timeline" src="/public/time-line-img/camion-container2.jpg" alt="">
+                            <img class="w-full img-timeline" src="/public/time-line-img/camion-container2.jpg" alt="camion baranda voclable lona enlonado transportes transporte ruta pallets contenedores chasis acoplado">
                         </swiper-slide>
                         <swiper-slide class="carousel-item w-full">
-                            <img class="w-full img-timeline" src="/public/time-line-img/camion-container3.jpg" alt="">
+                            <img class="w-full img-timeline" src="/public/time-line-img/camion-container3.jpg" alt="camion baranda voclable lona enlonado transportes transporte ruta pallets contenedores chasis acoplado">
                         </swiper-slide>
                     </swiper>
                 </div>

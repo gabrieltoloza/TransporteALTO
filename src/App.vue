@@ -9,6 +9,36 @@
 
     import { computed, onMounted, ref, watch } from 'vue';
     import { RouterLink, RouterView, useRoute } from 'vue-router';
+    import { useHead } from '@vueuse/head';
+
+    // SEO y POSICIONAMIENTO
+    useHead({
+        title: 'Transporte ALTO - Transporte de cargas generales terrestres',
+        meta: [
+            {
+                name: 'description',
+                content: 'En Transporte ALTO nos dedicamos a transportes de cargas generales terrestres. Para mas informacion visita nuestro sitio oficial.'
+            },
+            {
+                property: 'og:title',
+                content: 'Transporte ALTO - Cargas generales terrestres'
+            },
+            {
+                property: 'og:description',
+                content: 'En transporte ALTO nos dedicamos a transportes de cargas generales terrestres. Para mas informacion viista nuestro sitio oficial.'
+            },
+            {
+                property: 'og:image',
+                content: 'https://toxicblood2023.github.io/TransporteALTO/assets/TransporteAlto-copia-CzGPZYZZ.png'
+            },
+            {   
+                property: 'twitter:card',
+                content: 'summary_large_image'
+            }
+        ]
+    })
+    // SEO y POSICIONAMIENTO
+
 
     const inputDrawer = ref(false)
 
@@ -64,7 +94,7 @@
                 <!-- Sidebar content here -->
 
                 <div class="flex mb-10">
-                    <img class="img-navbar" src="/public/logo/TransporteAlto-copia.png" alt="">
+                    <img class="img-navbar" src="/public/logo/TransporteAlto-copia.png" alt="logo-transporte-ALTO-transportes-menu">
                     <li class="text-end ml-auto"><label for="my-drawer" id="btn-close" class="btn btn-ghost w-10 ">X</label></li>
                 </div>
                 <RouterLink to="/">

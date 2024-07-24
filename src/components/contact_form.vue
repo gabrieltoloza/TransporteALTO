@@ -5,6 +5,28 @@
     import emailjs from '@emailjs/browser';
     import { formSchema } from '../../utils';
     import { observer } from '../../utils';
+import { useHead } from '@vueuse/head';
+
+    useHead({
+        meta: [
+            {
+                property: 'description',
+                content: 'Cotizamos tu viaje al instante! Comunicate con nostros via Whatsapp o completa el formulario.'
+            },
+            {
+                property: 'og:title',
+                content: 'Transporte ALTO - Cotizá tu viaje'
+            },
+            {
+                property: 'og:description',
+                content: 'Cotizamos tu viaje al instante! Comunicate con nostros via Whatsapp o completa el formulario.'
+            },
+            {
+                property: 'twitter:card',
+                content: 'summary_large_image'
+            }
+        ]
+    })
 
 
 
@@ -124,13 +146,13 @@
                     <img
                         class="w-96 h-96 img-contact"
                         src="/public/card-main/mapa-argentina-animado1.png"
-                        alt="argentina-todoelpais-mapa-provincias"/>
+                        alt="argentina todoelpais mapa Argentina provincias buenos aires envios fletes cargas generales terrestres"/>
 
                     <img
                         id="img-2"
                         class="w-96 h-96 img-contact"
                         src="/public/card-main/mapa-argentina-animado5.png"
-                        alt="argentina-todoelpais-mapa-provincias"/>
+                        alt="argentina todoelpais mapa Argentina provincias buenos aires envios fletes cargas generales terrestres"/>
 
                 </figure>
                 <div class="card-body flex justify-center items-center pb-20">

@@ -1,11 +1,15 @@
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 
-// https://vitejs.dev/config/
+
 export default defineConfig({
-    base: '/TransporteALTO/',
+    base: '/',
     plugins: [vue()],
     define: {
         'procces.env': process.env
+    },
+    ssgOptions: {
+        script: 'async',
+        formatting: 'minify'
     }
 })

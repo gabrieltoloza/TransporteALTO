@@ -1,28 +1,32 @@
 <script setup>
 
+  import { onBeforeUnmount } from 'vue';
+
+
+
 </script>
 
 <template>
 
 <footer class="custom-footer footer bg-base-200 text-base-content p-10 lg:h-96 lg:justify-evenly lg:items-end">
   <nav>
-    <h6 class="footer-title lazy-effect">Services</h6>
-    <a class="link link-hover lazy-effect">Branding</a>
-    <a class="link link-hover lazy-effect">Design</a>
-    <a class="link link-hover lazy-effect">Marketing</a>
+    <h6 class="footer-title lazy-effect">Servicios</h6>
+    <a class="link link-hover lazy-effect">Empresa</a>
+    <a class="link link-hover lazy-effect">Diseño</a>
+    <a class="link link-hover lazy-effect">Nosotros</a>
 
   </nav>
   <nav>
-    <h6 class="footer-title lazy-effect">Company</h6>
-    <a class="link link-hover lazy-effect">About us</a>
-    <a class="link link-hover lazy-effect">Contact</a>
-    <a class="link link-hover lazy-effect">Jobs</a>
+    <h6 class="footer-title lazy-effect">Viajes</h6>
+    <a class="link link-hover lazy-effect">Nosotros</a>
+    <a class="link link-hover lazy-effect">Contacto</a>
+    <a class="link link-hover lazy-effect">Viajes</a>
   </nav>
   <nav>
     <h6 class="footer-title lazy-effect">Legal</h6>
-    <a class="link link-hover lazy-effect">Terms of use</a>
-    <a class="link link-hover lazy-effect">Privacy policy</a>
-    <a class="link link-hover lazy-effect">Cookie policy</a>
+    <a class="link link-hover lazy-effect">Términos de uso</a>
+    <a class="link link-hover lazy-effect">Política de privacidad</a>
+    <a class="link link-hover lazy-effect">Política de cookies</a>
   </nav>
 </footer>
 

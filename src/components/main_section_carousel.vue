@@ -32,12 +32,12 @@
         
         <div class="carousel w-full h-full absolute top-0 left-0 z-0">
             <swiper :pagination="pagination" :loop="true" :autoplay="{ delay: 4000, disableOnInteraction: false}" :modules="modules" class="mySwiper ">
-                <swiper-slide><img loading="lazy" class="carousel-item w-full h-full blur-sm" src="/public/img-carousel/camion-carousel-ruta1.avif" alt=""></swiper-slide>
-                <swiper-slide><img loading="lazy" class="carousel-item w-full h-full blur-sm" src="/public/img-carousel/container3.jpg" alt=""></swiper-slide>
-                <swiper-slide><img loading="lazy" class="carousel-item w-full h-full blur-sm" src="/public/img-carousel/container2.png" alt=""></swiper-slide>
-                <swiper-slide><img loading="lazy" class="carousel-item w-full h-full blur-sm" src="/public/img-carousel/camion-ruta-amanecer.webp" alt=""></swiper-slide>
-                <swiper-slide><img loading="lazy" class="carousel-item w-full h-full blur-sm" src="/public/img-carousel/camion-carousel-main2.avif" alt=""></swiper-slide>
-                <swiper-slide><img loading="lazy" class="carousel-item w-full h-full blur-sm" src="/public/img-carousel/camion-carousel-main1.webp" alt=""></swiper-slide>
+                <swiper-slide><img class="carousel-item w-full h-full blur-sm" src="/public/img-carousel/camion-carousel-ruta1.avif" alt="camion ruta cargas Argentina Provincia de Buenos Aires contenedores camion semirremolque baranda volcable lona ruedas carretera"></swiper-slide>
+                <swiper-slide><img class="carousel-item w-full h-full blur-sm" src="/public/img-carousel/container3.jpg" alt="camion ruta cargas Argentina Provincia de Buenos Aires contenedores camion semirremolque baranda volcable lona ruedas carretera"></swiper-slide>
+                <swiper-slide><img class="carousel-item w-full h-full blur-sm" src="/public/img-carousel/container2.png" alt="camion ruta cargas Argentina Provincia de Buenos Aires contenedores camion semirremolque baranda volcable lona ruedas carretera"></swiper-slide>
+                <swiper-slide><img class="carousel-item w-full h-full blur-sm" src="/public/img-carousel/camion-ruta-amanecer.webp" alt="camion ruta cargas Argentina Provincia de Buenos Aires contenedores camion semirremolque baranda volcable lona ruedas carretera"></swiper-slide>
+                <swiper-slide><img class="carousel-item w-full h-full blur-sm" src="/public/img-carousel/camion-carousel-main2.avif" alt="camion ruta cargas Argentina Provincia de Buenos Aires contenedores camion semirremolque baranda volcable lona ruedas carretera"></swiper-slide>
+                <swiper-slide><img class="carousel-item w-full h-full blur-sm" src="/public/img-carousel/camion-carousel-main1.webp" alt="camion ruta cargas Argentina Provincia de Buenos Aires contenedores camion semirremolque baranda volcable lona ruedas carretera"></swiper-slide>
             </swiper>
         </div>
 
@@ -50,7 +50,7 @@
                     <img
                     src="/public/card-main/mapa-argentina-animado4.jpg"
                     class="w-full img-main"
-                    alt="envios-Argentina-fletes-mapa" />
+                    alt="envios Argentina fletes mapa cargas generales terrestres ruta pallets contenedores" />
                 </figure>
                 <div class="card-body">
                     <h2 class="text-center text-xl font-bold">Envios a todo el pais.</h2>

@@ -21,7 +21,7 @@
 
     <div class="navbar bg-base-100 p-1 pt-0 navbar-main">
         <div class="flex-1 lg:ml-10">
-             <img class="img-navbar" src="/public/logo/TransporteAlto-copia.png" alt="">
+             <img class="img-navbar" src="/public/logo/TransporteAlto-copia.png" alt="logo-transporte-ALTO-transportes">
         </div>
 
         <label @click="activarDrawer" for="my-drawer" class="btn btn-ghost btn-menu-drawer mr-3 p-0">
