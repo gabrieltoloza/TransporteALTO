@@ -37,6 +37,8 @@ export const formSchema = z.object({
 //*  Metodo de IntersectionObserver
 
 
+
+// Observador para controlar el efecto lazy loading
 export const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
         entry.target.classList.toggle("show", entry.isIntersecting)
@@ -46,3 +48,21 @@ export const observer = new IntersectionObserver(entries => {
     threshold: 0,
     rootMargin: "100px"
 })
+
+
+
+
+// Observador de dispositivos mobiles para la seccion time_line
+export const observerTimeLine = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.swiper.params.autoplay.delay = 800
+            entry.target.swiper.autoplay.start()
+            console.log("Se disparo el evento 'start' en dispositivos mobiles")
+        } else {
+            entry.target.swiper.autoplay.stop()
+            entry.target.swiper.slideTo(0)
+            console.log("Se disparo el evento 'stop' en dispositibos mobiles")
+        }
+    })
+}, {threshold: 1})

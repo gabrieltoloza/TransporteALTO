@@ -1,7 +1,7 @@
 <script setup>
-    import { onMounted } from 'vue';
+    // import { onMounted } from 'vue';
     import camionPlayo from './iconos/camion_playo.vue';
-    import { observer } from '../../utils';
+    // import { observer } from '../../utils';
 
     const fecha = new Date().getFullYear()
 

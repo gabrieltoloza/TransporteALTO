@@ -5,7 +5,7 @@
     import emailjs from '@emailjs/browser';
     import { formSchema } from '../../utils';
     import { observer } from '../../utils';
-import { useHead } from '@vueuse/head';
+    import { useHead } from '@vueuse/head';
 
     useHead({
         meta: [

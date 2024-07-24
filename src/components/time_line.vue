@@ -3,7 +3,7 @@
     import { Swiper, SwiperSlide } from 'swiper/vue';
     import { Autoplay, EffectFade, Navigation} from 'swiper/modules';
     import { useRoute } from 'vue-router';
-    import { observer } from '../../utils';
+    import { observer, observerTimeLine } from '../../utils';
     import 'swiper/css';
     import 'swiper/swiper-bundle.css';
     import 'swiper/css/effect-fade';
@@ -57,22 +57,9 @@
                 })
             })
         } else {
-            const observerTimeLine = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.swiper.params.autoplay.delay = 800
-                        entry.target.swiper.autoplay.start()
-                        console.log("Se disparo el evento 'start' en dispositivos mobiles")
-                    } else {
-                        entry.target.swiper.autoplay.stop()
-                        entry.target.swiper.slideTo(0)
-                        console.log("Se disparo el evento 'stop' en dispositibos mobiles")
-                    }
-                })
-            }, {threshold: 1})
-
+            
             swiperEl.forEach(element => {
-                observerTimeLine.observe(element)
+                observerTimeLine.observe(element) // Observador para dispositivos mobiles de la seccion time_line
             })
         }
         
