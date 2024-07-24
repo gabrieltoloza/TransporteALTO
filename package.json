@@ -12,7 +12,6 @@
     "@emailjs/browser": "^4.4.1",
     "@vueuse/head": "^2.0.0",
     "swiper": "^11.1.4",
-    "vite-ssg": "^0.23.8",
     "vue": "^3.4.29",
     "vue-router": "^4.4.0",
     "zod": "^3.23.8"

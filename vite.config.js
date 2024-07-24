@@ -7,9 +7,5 @@ export default defineConfig({
     plugins: [vue()],
     define: {
         'procces.env': process.env
-    },
-    ssgOptions: {
-        script: 'async',
-        formatting: 'minify'
     }
 })

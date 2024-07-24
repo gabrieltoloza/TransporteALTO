@@ -1,4 +1,4 @@
-// import { createRouter, createWebHistory } from 'vue-router';
+import { createRouter, createWebHistory } from 'vue-router';
 import Contact_form from '../components/contact_form.vue';
 import Time_line from '../components/time_line.vue';
 import Home from '../components/Home.vue';
@@ -27,7 +27,11 @@ const routes = [
 ];
 
 
+const router = createRouter({
+    history: createWebHistory('/'),
+    routes
+})
 
 
-export { routes }
+export default router
 

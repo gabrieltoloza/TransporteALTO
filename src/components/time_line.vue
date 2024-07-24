@@ -11,6 +11,7 @@
 
     //SEO y posicionamiento
     useHead({
+        
         meta: [
             {
                 property: 'description',
@@ -31,6 +32,7 @@
         ]
     })
     //SEO y posicionamiento
+    
     
     // Registro de modulos Swiper
     const modules = ref([EffectFade, Autoplay])
